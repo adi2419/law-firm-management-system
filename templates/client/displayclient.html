@@ -1,0 +1,68 @@
+<!-- client/displayclient.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Clients</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 150px;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Client Details</h1>
+    
+    <form method="get" enctype="multipart/form-data">
+        <label for="filter_client_name">Filter by Client Name:</label>
+        <input type="text" id="filter_client_name" name="filter_client_name">
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Lawyer ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+        {% for client in clients %}
+            <tr>
+                <td>{{ client[0] }}</td>
+                <td>{{ client[1] }}</td>
+                <td>{{ client[2] }}</td>
+                <td>{{ client[3] }}</td>
+                <td>{{ client[4] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

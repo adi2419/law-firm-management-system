@@ -1,0 +1,45 @@
+law_firm_management/
+
+|-- app/
+|   |-- __init__.py
+|   |-- routes/
+|   |   |-- __init__.py
+|   |   |-- lawyer_routes.py
+|   |   |-- client_routes.py
+|   |   |-- court_routes.py
+|   |-- templates/
+|   |   |-- lawyer/
+|   |   |   |-- dashboard.html
+|   |   |   |-- cases.html
+|   |   |-- client/
+|   |   |   |-- dashboard.html
+|   |   |   |-- cases.html
+|   |   |-- court/
+|   |       |-- dashboard.html
+|   |       |-- cases.html
+|   |-- static/
+|-- config.py
+|-- requirements.txt
+|-- run.py
+
+
+
+
+
+law_firm_management/
+|   templates/
+|   |-- client/
+|   |   |-- add.html
+|   |   |-- displayclient.html
+|   |-- lawyer/
+|   |   |-- add.html
+|   |   |-- displaylawyer.html
+|   |-- index.html
+|   app.py
+
+
+
+
+details in chat gpt of my personal acc
+
+

@@ -1,0 +1,76 @@
+<!-- lawyer/displaylawyer.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Lawyers</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 150px;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lawyer Details</h1>
+    
+    <form method="get" enctype="multipart/form-data"">
+        <label for="filter_lawyer_type">Filter by Lawyer Type:</label>
+        <select id="filter_lawyer_type" name="filter_lawyer_type">
+            <option value="">All</option>
+            <option value="Criminal">Criminal</option>
+            <option value="Civil">Civil</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="search_lawyer_name">Search by Lawyer Name:</label>
+        <input type="text" id="search_lawyer_name" name="search_lawyer_name">
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+        {% for lawyer in lawyers %}
+            <tr>
+                <td>{{ lawyer[0] }}</td>
+                <td>{{ lawyer[1] }}</td>
+                <td>{{ lawyer[2] }}</td>
+                <td>{{ lawyer[3] }}</td>
+                <td>{{ lawyer[4] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
